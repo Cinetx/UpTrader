@@ -1,0 +1,74 @@
+.header-bar {
+    display: none;
+}
+
+@media (min-width: 1200px){
+    .header-bar {
+        display: block;
+        
+        padding-top: 200px;
+        padding-bottom: 200px;
+
+        background-image: url('../images/bg-desktop.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .header__title {
+        font-size: 36px;
+        font-weight: 300;
+        text-align: center;
+
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+    .header-content__wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-self: center;
+        
+        margin: 0 auto;
+        width: 1200px;
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+
+            width: 1200px;
+        }
+
+        .header__content__title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        
+            text-align: center;
+            font-weight: 300;
+            font-size: 28px;
+            cursor: pointer;
+        
+            width: 365px;
+            height: 365px;
+            margin: 0 auto;
+        
+            border-radius: 50%;
+            box-shadow:0 0 0 200px rgba(255, 255, 255, 0.5) inset,
+            0 0 0 10px rgba(255, 255, 255, 0.5);
+        
+            &--trade:before{
+                content: url('../images/icon-1--desktop.png');
+            }
+            &--invest:before{
+                content: url('../images/icon-2--desktop.png');
+            }
+            &--investors:before{
+                content: url('../images/icon-3--desktop.png');
+            }
+            &:hover {
+                border: 1px solid #00b0a2;
+                
+            }
+            
+        }
+    }
+}
